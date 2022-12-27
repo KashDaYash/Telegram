@@ -44,7 +44,7 @@ su = DEVS + SUDO_USERS
 su.append(OWNER_ID)
 
 
-@Zbot(pattern="^/promote(?: |$|@Zaid2_Robot)(.*)")
+@Zbot(pattern="^/promote(?: |$|@DynicaBot)(.*)")
 async def promote__user___(e):
     event = e
     if e.is_private:
@@ -95,7 +95,7 @@ async def promote__user___(e):
         )
 
 
-@Zbot(pattern="^/(superpromote|fullpromote)(?: |$|@Zaid2_Robot)(.*)")
+@Zbot(pattern="^/(superpromote|fullpromote)(?: |$|@DynicaBot)(.*)")
 async def super_promote(e):
     event = e
     if e.is_private:
@@ -144,7 +144,7 @@ async def super_promote(e):
         await e.reply(translate("Seems like I don't have enough rights to do that.", event.chat_id))
 
 
-@Zbot(pattern="^/demote(?: |$|@Zaid2_Robot)(.*)")
+@Zbot(pattern="^/demote(?: |$|@DynicaBot)(.*)")
 async def _de(e):
     event = e
     if e.is_private:
@@ -393,7 +393,7 @@ async def bot(event):
     await event.reply(final)
 
 
-@Zbot(pattern="^/rpromote(?: |$|@Zaid2_Robot)(.*)")
+@Zbot(pattern="^/rpromote(?: |$|@DynicaBot)(.*)")
 async def kek(event):
     if not event.sender_id == OWNER_ID:
         return
@@ -468,7 +468,7 @@ async def x_pic(e):
     await e.reply(translate("✨ Successfully set new chatpic!", event.chat_id))
 
 
-@Zbot(pattern="^/setgtitle(?: |$|@Zaid2_Robot)(.*)")
+@Zbot(pattern="^/setgtitle(?: |$|@DynicaBot)(.*)")
 async def x_title(e):
     event = e
     if not e.is_group:
@@ -548,7 +548,7 @@ async def x_sticker_set(e):
         await e.reply(str(x))
 
 
-@Zbot(pattern="^/(setgdesc|setgdescription)(?: |$|@Zaid2_Robot)(.*)")
+@Zbot(pattern="^/(setgdesc|setgdescription)(?: |$|@DynicaBot)(.*)")
 async def x_description(e):
     event = e
     if not e.is_channel:
